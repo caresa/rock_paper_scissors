@@ -1,4 +1,4 @@
-class RPS::Users
+class RPS::User
 
   attr_reader :name, :password
 
@@ -7,7 +7,7 @@ class RPS::Users
     @password = data[:password]
   end
 
-  def all
+  def self.all
     RPS::SQLDB.get_users
   end
 
